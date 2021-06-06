@@ -1,0 +1,70 @@
+﻿@model Book 
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h3>Update</h3>
+<br />
+<form method="post">
+    <input type="hidden" value="@Model.Id" />
+    <table>
+        <tr>
+            <td>
+                <label>Name: </label>
+            </td>
+            <td>
+                <input asp-for="Titel" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Author: </label>
+            </td>
+            <td>
+                <input asp-for="Autor" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Page: </label>
+            </td>
+            <td>
+                <input asp-for="Page" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Language: </label>
+            </td>
+            <td>
+                <input asp-for="Language" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Stock: </label>
+            </td>
+            <td>
+                <input asp-for="Stock" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-format="{0:MM/dd/yyyy}">Datum: </label>
+            </td>
+            <td>
+                <input asp-for="Erscheinungsdatum" />
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <label>Cover: </label>
+            </td>
+            <td>
+                <input asp-for="Image" />
+            </td>
+        </tr>
+    </table>
+    <input value="Save" type="submit" />
+</form>

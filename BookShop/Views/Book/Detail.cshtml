@@ -1,0 +1,78 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h3>Detail</h3>
+
+
+<table>
+    <tr>
+        <td>
+            Id:
+        </td>
+        <td>
+            @Model.Id
+        </td>
+        <td rowspan="7">
+            <img style="width:200px;" src="@Model.Image" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Titel
+        </td>
+        <td>
+            @Model.Titel
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Author
+        </td>
+        <td>
+            @Model.Autor
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Page:
+        </td>
+        <td>
+            @Model.Page
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Language:
+        </td>
+        <td>
+            @Model.Language
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Stock:
+        </td>
+        <td>
+            @Model.Stock
+        </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Date:
+        </td>
+        <td>
+            @Model.Erscheinungsdatum.ToString("MM/dd/yyyy")
+        </td>
+        <td></td>
+    </tr>
+</table>
+
+<a asp-action="Update" asp-controller="Book" asp-route-id="@Model.Id">update</a>
+<a asp-action="Delete" asp-controller="Book" asp-route-id="@Model.Id">delete</a>

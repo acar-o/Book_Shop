@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "List";
+}
+
+<h3>Book List</h3>
+
+<table class="table table-striped">
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Language</th>
+        <th scope="col">Page</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Cover</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Titel
+            </td>
+            <td>
+                @item.Autor
+            </td>
+            <td>
+                @item.Language
+            </td>
+            <td>
+                @item.Page
+            </td>
+            <td>
+                @item.Stock
+            </td>
+            <td>
+                <a href="@item.Image"><img style="width:40px;" src="@item.Image" /></a>
+            </td>
+            <td colspan="2">
+                <a asp-action="Detail" asp-controller="Book" asp-route-id="@item.Id">details</a> |
+                <a asp-action="Update" asp-controller="Book" asp-route-id="@item.Id">update</a> |
+                <a asp-action="Delete" asp-controller="Book" asp-route-id="@item.Id">delete</a>
+            </td>
+        </tr>
+    }
+</table>
