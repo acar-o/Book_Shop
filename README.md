@@ -16,4 +16,4 @@ Visual Studio Community 2019 was used as the development environment.
 * Editing in Razor Page
 
 ## Screenshot
-![Library-Inventory](https://github.com/acar-o/Library-Inventory/blob/master/BookShop/wwwroot/img/LibraryInventory.png)
+![Library-Inventory](https://github.com/acar-o/Book_Shop/blob/master/BookShop/wwwroot/img/LibraryInventory.png)
